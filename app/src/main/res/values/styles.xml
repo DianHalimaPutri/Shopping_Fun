@@ -5,6 +5,42 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
 
+    </style>
+    <string name="login">Login</string>
+    <string name="logo_name">ShoppingFun</string>
+
+    <!--Button-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+
+    <!-- String For Dashnoard-->
+
+    <!--Categories-->
+    <string name="drees">Dress</string>
+    <string name="shoes">Shoes</string>
+    <string name="makeup">MakeUp</string>
+    <string name="bag">Bags</string>
+
+    <!-- Titles and Description-->
+    <string name="featured_location">All Featured Location</string>
+    <string name="most_viewed_locations">Most Locations</string>>
+    <string name="categories">Categories</string>
+    <string name="view_all">View All</string>
+    <string name="search_text">Seacrh....</string>
+
+    <!--All Categories Name-->
+    <string name="expand_all">Expand All</string>
+    <string name="shopping_fun">ShoopingFun</string>
+    <string name="all_Shop">All Shop</string>
+
+    <!-- General  String -->
+    <string name="sign_up">Sign Up</string>
+    <string name="retail_heading">ShoppingFun</string>
+
+    <string name="create_account">Creat\nAccount/</string>
+    <string name="how_we_work">How we work?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forget_password">Forget Password</string>
 </resources>
