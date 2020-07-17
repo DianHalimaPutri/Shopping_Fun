@@ -58,4 +58,6 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
             desc = itemView.findViewById(R.id.emina_desc);
         }
     }
+
+
 }

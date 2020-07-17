@@ -2,6 +2,85 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group
         android:checkableBehavior="single">
-        
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/home_menu"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/search"
+            android:icon="@drawable/search_icon"/>
     </group>
+
+    <item android:title="profile">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="@string/login"
+                    android:icon="@drawable/login_menu"/>
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="@string/profile"
+                    android:icon="@drawable/profile_menu"/>
+                <item
+                    android:id="@+id/logout"
+                    android:title="@string/logout"
+                    android:icon="@drawable/logout_menu"/>
+
+            </group>
+
+
+        </menu>
+    </item>
+
+    <item android:title="Categories">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/dress"
+                    android:title="@string/drees"
+                    android:icon="@drawable/shop_menu"/>
+                <item
+                    android:id="@+id/nav_shoes"
+                    android:title="@string/shoes"
+                    android:icon="@drawable/shop_menu"/>
+                <item
+                    android:id="@+id/nav_bag"
+                    android:title="@string/bag"
+                    android:icon="@drawable/shop_menu"/>
+                <item
+                    android:id="@+id/makeup"
+                    android:title="@string/makeup"
+                    android:icon="@drawable/shop_menu"/>
+
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Share">
+        <menu>
+            <group
+                android:checkableBehavior="none">
+                <item
+                    android:id="@+id/share"
+                    android:title="@string/share"
+                    android:icon="@drawable/share_icon"/>
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/retus"
+                    android:icon="@drawable/rateus_icon"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+
 </menu>

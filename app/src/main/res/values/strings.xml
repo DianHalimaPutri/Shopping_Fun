@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Shopping_Fun</string>
     <string name="bags">Bags</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="all_categories">ALL CATEGORIES</string>
+    <string name="add_missing_place">ADD MISSING PLACE</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="retus">Ret Us</string>
 </resources>
