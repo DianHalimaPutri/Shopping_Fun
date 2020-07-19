@@ -2,33 +2,37 @@ package com.example.shopping_fun;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.solver.ArrayLinkedVariables;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.shopping_fun.HalperClass.HomeAdapter.FeaturedAdapter;
 import com.example.shopping_fun.HalperClass.HomeAdapter.FeaturedHelperClass;
+import com.example.shopping_fun.LoginSignup.ReatailStartUpScreen;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
 
 public class UserDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    //Variable
+    static final float END_SCALE = 0.7f;
 
     RecyclerView featuredRecycler;
     RecyclerView.Adapter adapter;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
     ImageView menu_Icon;
+    LinearLayout contentView;
 
     //Drawer Menu
     DrawerLayout drawerLayout;
@@ -43,6 +47,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         menu_Icon = findViewById(R.id.menu_icon);
+        contentView = findViewById(R.id.content);
 
 
         //Functions will be executed automatically when this activity will be created
@@ -85,20 +90,21 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 //scale the view based on current
                 final float diffScledOffset = slideOffset * (1  -  END_SCALE);
-                final float offsetScale = diffScledOffset;
+                final float offsetScale = 1 - diffScledOffset;
                 contentView.setScaleX(offsetScale);
                 contentView.setScaleY(offsetScale);
+
+                //Translate  the view , accounting for the scaled width
+                final float xOffset = drawerView.getWidth() * slideOffset;
+                final float xOffsetdiff = contentView.getWidth() * diffScledOffset / 2;
+                final float xTranslation = xOffset - xOffsetdiff;
+                contentView.setTranslationX(xTranslation);
+
             }
+
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerVisible(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }else
-            super.onBackPressed();
-    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return true;
@@ -106,23 +112,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
 
     //Recycler Views Functions
-    private void categoriesRecycle() {
-
-        //All Gradients
-        gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffd4cbe5, 0xffd4cbe5});
-        gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff7adccf, 0xff7adccf});
-        gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xfff7c59f, 0xFFf7c59f});
-        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
-
-        ArrayList<CategoriesHalperClass> categoriesHalperClasses = new ArrayList<>();
-        categoriesHalperClasses.add(new CategoriesHalperClass(gradient1, R.drawable.damelia, "Damelia"));
-        categoriesHalperClasses.add(new CategoriesHalperClass(gradient2, R.drawable.diamore_grosir_asli_, "Diamore"));
-        categoriesHalperClasses.add(new CategoriesHalperClass(gradient3, R.drawable.miniso, "Minisp"));
-        categoriesHalperClasses.add(new CategoriesHalperClass(gradient4, R.drawable.emina, "Emina"));
-
-
-    }
-
     private void featuredRecycler() {
         featuredRecycler.setHasFixedSize(true);
         featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -142,6 +131,22 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         GradientDrawable gradient = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
 
 
+    }
+
+    //normal function
+
+    public void  callRetailSCreen(View view){
+
+        startActivity(new Intent(getApplicationContext(), ReatailStartUpScreen.class));
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else
+            super.onBackPressed();
     }
 
 }

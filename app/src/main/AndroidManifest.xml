@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartUp"></activity>
+        <activity android:name=".LoginSignup.ForgetPasswordSuccessMessage"></activity>
+        <activity android:name=".LoginSignup.SetNewPassword" />
+        <activity android:name=".LoginSignup.MakeSelection" />
+        <activity android:name=".LoginSignup.ForgetPassword" />
+        <activity android:name=".LoginSignup.Verify_OTP" />
+        <activity android:name=".LoginSignup.SignUp3ndClass" />
+        <activity android:name=".LoginSignup.SignUp2ndClass" />
+        <activity android:name=".LoginSignup.SignUp" />
+        <activity android:name=".LoginSignup.Login" />
+        <activity android:name=".LoginSignup.ReatailStartUpScreen" />
+        <activity android:name=".StartUp" />
         <activity android:name=".UserDashboard" />
         <activity android:name=".SplashScreen">
             <intent-filter>

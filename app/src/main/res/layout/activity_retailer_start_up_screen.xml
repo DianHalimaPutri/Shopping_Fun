@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartUp"
     android:background="@color/home_background"
-    android:padding="30dp">
+    android:padding="30dp"
+    tools:context="com.example.shopping_fun.LoginSignup.ReatailStartUpScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,46 +16,71 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/ic_baseline_shopping_basket_24" />
 
         <TextView
-            android:layout_width="167dp"
-            android:layout_height="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/retail_heading"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/black"
+            android:layout_marginTop="120dp"
+            android:textSize="36sp"
             app:fontFamily="@font/pattaya"
             android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/retailer_tag_nline"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp">
+            android:layout_marginTop="40dp">
+
 
             <Button
+                android:id="@+id/login_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="callLoginScreen"
+                android:background="@color/card4"
                 android:text="@string/login"
-                android:layout_weight="1"
-                android:layout_marginRight="10dp"/>
+                android:textColor="@color/black"
+                tools:ignore="ButtonStyle"
+                android:transitionName="transition_login"/>
+
             <Button
+                android:id="@+id/signup_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:layout_marginRight="10dp"/>
+                android:background="@color/card4"
+                android:text="@string/sign_up"
+                android:textColor="@color/black" />
+
+
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/how_we_work"
-            android:background="#00000000"
-            android:textColor="@color/black"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/how_we_work"
+            android:textColor="@color/black"
+            android:background="#00000000"/>
+
+
 
     </LinearLayout>
+
 </ScrollView>

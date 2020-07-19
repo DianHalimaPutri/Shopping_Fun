@@ -1,14 +1,16 @@
-package com.example.shopping_fun;
+package com.example.shopping_fun.LoginSignup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class StartUp extends AppCompatActivity {
+import com.example.shopping_fun.R;
+
+public class MakeSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_up);
+        setContentView(R.layout.activity_make_selection);
     }
 }

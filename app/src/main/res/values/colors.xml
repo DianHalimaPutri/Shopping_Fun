@@ -12,5 +12,6 @@
     <color name="card4">#FFFFCC99</color>
     <color name="banner_light">#FFFFFFCC</color>
     <color name="background">#FFCCFFFF</color>
+    <color name="light_white">#eee7f8</color>
 
 </resources>

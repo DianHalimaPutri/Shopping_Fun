@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -21,6 +21,23 @@
     </style>
     <string name="login">Login</string>
     <string name="logo_name">ShoppingFun</string>
+    <string name="app_name">Shopping_Fun</string>
+    <string name="bags">Bags</string>
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="all_categories">ALL CATEGORIES</string>
+    <string name="add_missing_place">ADD MISSING PLACE</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="retus">Ret Us</string>
+    <string name="enter_username">Enter Usernam</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="create_account" tools:ignore="DuplicateDefinition">Create \nAccount</string>
+
+
 
     <!--Button-->
     <string name="skip_btn">Skip</string>
@@ -51,9 +68,28 @@
     <!-- General  String -->
     <string name="sign_up">Sign Up</string>
     <string name="retail_heading">ShoppingFun</string>
+    <string name="retailer_tag_nline">We Wiill Make itu Easier For You To Find  the Store you Need</string>
 
-    <string name="create_account">Creat\nAccount/</string>
+
     <string name="how_we_work">How we work?</string>
-    <string name="remember_me">Remember Me</string>
-    <string name="forget_password">Forget Password</string>
+    <string name="enter_fullname">Enter FullName</string>
+    <string name="username">User Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="password">Password </string>
+    <string name="forget_password_detail">provide your account\'s email for which you want to reset your password?</string>
+    <string name="enter_email"></string>
+    <string name="make_selection">Make Selection</string>
+    <string name="make_selection_desc">Select With Contact detail should we use to restart your password</string>
+    <string name="via_sms"> Via SMS</string>
+    <string name="via_email">Via Email</string>
+    <string name="new_credentials">New Credentials</string>
+    <string name="new_cradentials_desc">Your Identity Has Been Verified! Set Your New Password</string>
+    <string name="password_updated">Password Updated</string>
+    <string name="password_success_updated_message">Your Password Has Been Updated! </string>
+
+    <!--    OTP Screen  -->
+    <string name="otp_code_text">Code</string>
+    <string name="otp_verification_text">Verification</string>
+    <string name="otp_description_text">Enter one time password sent on\n+628</string>
 </resources>
