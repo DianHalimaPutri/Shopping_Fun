@@ -1,6 +1,6 @@
 package com.example.shopping_fun.HalperClass.HomeAdapter;
 
-class MostViewedHelperClass {
+public class MostViewedHelperClass {
 
     int image;
     String title, description;

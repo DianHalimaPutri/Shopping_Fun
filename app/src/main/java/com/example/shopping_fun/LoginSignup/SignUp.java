@@ -44,7 +44,7 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-    public void callNextSignupScreen(View view) {
+    public void callNextSignupScreen(View view, View scrollView) {
         if (!validateFullName() | !validateUsername() | !validateEmail() | !validatePassword()) {
             return;
         }
@@ -65,7 +65,6 @@ public class SignUp extends AppCompatActivity {
         } else {
             startActivity(intent);
         }
-
     }
 
 

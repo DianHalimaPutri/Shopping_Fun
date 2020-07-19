@@ -16,8 +16,12 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.shopping_fun.HalperClass.HomeAdapter.CategoriesAdapter;
+import com.example.shopping_fun.HalperClass.HomeAdapter.CategoriesHelperClass;
 import com.example.shopping_fun.HalperClass.HomeAdapter.FeaturedAdapter;
 import com.example.shopping_fun.HalperClass.HomeAdapter.FeaturedHelperClass;
+import com.example.shopping_fun.HalperClass.HomeAdapter.MostViewedAdapter;
+import com.example.shopping_fun.HalperClass.HomeAdapter.MostViewedHelperClass;
 import com.example.shopping_fun.LoginSignup.ReatailStartUpScreen;
 import com.google.android.material.navigation.NavigationView;
 
@@ -28,8 +32,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     //Variable
     static final float END_SCALE = 0.7f;
 
-    RecyclerView featuredRecycler;
-    RecyclerView.Adapter adapter;
+    RecyclerView featuredRecycler , mostViwedRecycler , categoriesRecycler;
+    RecyclerView.Adapter  adapter;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
     ImageView menu_Icon;
     LinearLayout contentView;
@@ -46,12 +50,16 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
+        mostViwedRecycler = findViewById(R.id.most_recycler);
+        categoriesRecycler = findViewById(R.id.categories_recyler);
         menu_Icon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
 
 
         //Functions will be executed automatically when this activity will be created
         featuredRecycler();
+        mostViewedRecycler();
+        categoriesRecycler();;
 
 
         //Menu Hooks
@@ -60,7 +68,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
 
         navigationDrawer();
-
 
     }
 
@@ -113,8 +120,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     //Recycler Views Functions
     private void featuredRecycler() {
-        featuredRecycler.setHasFixedSize(true);
-        featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<FeaturedHelperClass> featuredLocations = new ArrayList<>();
 
@@ -123,15 +128,54 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         featuredLocations.add(new FeaturedHelperClass(R.drawable.diamore_grosir_asli_, "Diamore", ""));
         featuredLocations.add(new FeaturedHelperClass(R.drawable.miniso, "Miniso", "menyediakan konsumen dengan produk-produk yang simple, natural, basic, high quality dan dengan harga yang terjangkau."));
 
+        featuredRecycler.setHasFixedSize(true);
+        featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         adapter = new FeaturedAdapter(featuredLocations);
         featuredRecycler.setAdapter(adapter);
 
 
-        GradientDrawable gradient = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffeff400, 0xffaff600});
+    }
 
+    private void mostViewedRecycler() {
+
+
+        mostViwedRecycler.setHasFixedSize(true);
+        mostViwedRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<MostViewedHelperClass> mostViewedLocations = new ArrayList<>();
+
+
+
+        adapter = new MostViewedAdapter(mostViewedLocations);
+        mostViwedRecycler.setAdapter(adapter);
+    }
+
+    private void categoriesRecycler(){
+
+        //AllGradient
+
+        gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,new int[]{0xffd4cbe5, 0xffd4cbe5});
+        gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff7adccf, 0xff7adccf});
+        gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xfff7c59f, 0xFFf7c59f});
+        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
+
+        ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
+        categoriesHelperClasses(new CategoriesHelperClass(gradient2, R.drawable.damelia,"sepatu, tas, dompet dan baju yang bergaransi 30-60 hari, untuk kualitas dan kenyamanannya sudah terjamin."));
+        categoriesHelperClasses(new CategoriesHelperClass(gradient1, R.drawable.diamore_grosir_asli_,""));
+        categoriesHelperClasses(new CategoriesHelperClass(gradient3, R.drawable.miniso," produk-produk yang simple, natural, basic, high quality dan dengan harga yang terjangkau."));
+        categoriesHelperClasses(new CategoriesHelperClass(gradient4, R.drawable.emina,""));
+
+        categoriesRecycler.setHasFixedSize(true);
+        categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        adapter = new CategoriesAdapter(categoriesHelperClasses);
+        categoriesRecycler.setAdapter(adapter);
 
     }
+
+    private void categoriesHelperClasses(CategoriesHelperClass categoriesHelperClass) {
+    }
+
 
     //normal function
 

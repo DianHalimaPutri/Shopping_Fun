@@ -13,4 +13,6 @@ public class Verify_OTP extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_o_t_p);
     }
+
+
 }

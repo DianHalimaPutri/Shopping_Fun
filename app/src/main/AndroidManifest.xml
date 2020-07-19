@@ -14,7 +14,6 @@
         <activity android:name=".LoginSignup.MakeSelection" />
         <activity android:name=".LoginSignup.ForgetPassword" />
         <activity android:name=".LoginSignup.Verify_OTP" />
-        <activity android:name=".LoginSignup.SignUp3ndClass" />
         <activity android:name=".LoginSignup.SignUp2ndClass" />
         <activity android:name=".LoginSignup.SignUp" />
         <activity android:name=".LoginSignup.Login" />
