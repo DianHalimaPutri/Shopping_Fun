@@ -28,7 +28,7 @@ public class SignUp2ndClass extends AppCompatActivity {
     Button next, login;
     TextView titleText, slideText;
     RadioGroup radioGroup;
-    RadioButton selectedAge;
+    RadioButton selectedGender;
     DatePicker datePicker;
 
 
@@ -55,8 +55,20 @@ public class SignUp2ndClass extends AppCompatActivity {
             return;
         }
 
-        selectedAge = findViewById(radioGroup.getCheckedRadioButtonId());
-        selectedAge.getText();
+        selectedGender = findViewById(radioGroup.getCheckedRadioButtonId());
+        String _gender = selectedGender.getText().toString();
+
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth();
+        int year = datePicker.getYear();
+
+        String _date = day+"/"+month+"/"+year;
+
+        String name = getIntent().getStringExtra("fullName");
+        String email = getIntent().getStringExtra("email");
+        String username = getIntent().getStringExtra("username");
+        String password = getIntent().getStringExtra("password");
+
 
         Intent intent = new Intent(getApplicationContext(),SignUp3ndClass.class);
 
