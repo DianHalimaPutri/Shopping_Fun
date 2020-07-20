@@ -73,7 +73,7 @@ class SignUp3ndClass extends AppCompatActivity {
 
         Pair[] pairs = new Pair[1];
         pairs[0] = new Pair<View, String>(ScrollView, "transition_OTP_Screen");
-        if (android.os.Build.SDK_INT >= Build.VERSION_CODES.LOLLIPOP);
+        if (Build.SDK_INT >= Build.VERSION_CODES.LOLLIPOP);
 
     }
 
