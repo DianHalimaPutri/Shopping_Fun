@@ -63,17 +63,11 @@ public class Verify_OTP extends AppCompatActivity {
                     codeBySystem = s;
                 }
                 @Override
-                public void onVerificationComplated(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+
                     String code = phoneAuthCredential.getSmsCode();
-                    if(code!=null);
+                    if (code!=null);
                     pinFromUser.setText(code);
-                    verifyCode(code);
-
-                }
-
-                @Override
-                public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
                 }
 
                 @Override
