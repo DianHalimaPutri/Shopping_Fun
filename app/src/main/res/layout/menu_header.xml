@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logo_name"
-        android:fontFamily="@font/pattaya"
+        android:fontFamily="sans-serif-black"
         android:textSize="26dp"
         android:layout_above="@id/menu_slogan"
         android:textColor="@color/black"/>
