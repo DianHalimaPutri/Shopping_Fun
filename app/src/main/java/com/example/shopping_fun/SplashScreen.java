@@ -4,19 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 public class SplashScreen extends AppCompatActivity {
-        private int waktu_loading = 4000;
 
-        //4000 = 4 detik
+    private static int SPLASH_TIME_OUT = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
-        Intent intent = new Intent(SplashScreen.this, Login.class) ;
-        startActivity(intent);
-        finish();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent homeintent = new Intent(SplashScreen.this, Login.class);
+                startActivity(homeintent);
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
     }
 }

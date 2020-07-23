@@ -1,82 +1,81 @@
 package com.example.shopping_fun;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.google.android.material.snackbar.Snackbar;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+import java.util.ArrayList;
 
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
-    private Context mContext;
-    private List<Baju> mData;
+    private ArrayList<String> arrayList; //Digunakan untuk Judul
+    private ArrayList<Integer> memeList; //Digunakan untuk Image/Gambar
 
-
-    public RecyclerViewAdapter(Context mContext, List<Baju> mData) {
-        this.mContext = mContext;
-        this.mData = mData;
+    //Membuat Konstruktor pada Class RecyclerViewAdapter
+    RecyclerViewAdapter(ArrayList<String> arrayList, ArrayList<Integer> memeList){
+        this.arrayList = arrayList;
+        this.memeList = memeList;
     }
 
-    @SuppressLint("ResourceType")
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view;
-        LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.id.clothing_card, parent,false);
+    //ViewHolder Digunakan Untuk Menyimpan Referensi Dari View-View
+    class ViewHolder extends RecyclerView.ViewHolder{
 
-        return new MyViewHolder(view);
+        private TextView JudulMeme, SubMeme;
+        private ImageView Meme;
+        private RelativeLayout ItemList;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            //Menginisialisasi View-View untuk kita gunakan pada RecyclerView
+            JudulMeme = itemView.findViewById(R.id.memetitle);
+            SubMeme = itemView.findViewById(R.id.sub_meme);
+            Meme = itemView.findViewById(R.id.meme);
+            ItemList = itemView.findViewById(R.id.item_list);
+        }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //Membuat View untuk Menyiapkan dan Memasang Layout yang Akan digunakan pada RecyclerView
+        View V = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_clothing, parent, false);
+        ViewHolder VH = new ViewHolder(V);
+        return VH;
+    }
 
-        holder.clothing_title.setText(mData.get(position).getTitle());
-        holder.clothing_img.setImageResource(mData.get(position).getThumbanail());
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        //Memanggil Nilai/Value Pada View-View Yang Telah Dibuat pada Posisi Tertentu
+        final String Nama = arrayList.get(position);//Mengambil data sesuai dengan posisi yang telah ditentukan
+        holder.JudulMeme.setText(Nama);
+        holder.SubMeme.setText("Gambar Meme Ke: "+position);
+        holder.Meme.setImageResource(memeList.get(position)); // Mengambil gambar sesuai posisi yang telah ditentukan
+        //Membuat Aksi Saat Judul Pada List ditekan
+        holder.JudulMeme.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, BajuActivity.class);
-                intent.putExtra("Title", mData.get(position).getTitle());
-                intent.putExtra("Description", mData.get(position).getDescription());
-                intent.putExtra("Thumbanail", mData.get(position).getThumbanail());
-                mContext.startActivity(intent);
+            public void onClick(View view) {
+                Snackbar.make(view, "Gambar Meme: "+position+" Ditekan", Snackbar.LENGTH_SHORT).show();
             }
         });
-
+        //Membuat Aksi Saat List Ditekan
+        holder.ItemList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Nama Saya: "+Nama, Snackbar.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        //Menghitung Ukuran/Jumlah Data Yang Akan Ditampilkan Pada RecyclerView
+        return arrayList.size();
     }
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-
-        TextView clothing_title;
-        ImageView clothing_img;
-        CardView cardView ;
-
-        public MyViewHolder(@NonNull View itemView) {
-
-            super(itemView);
-
-            clothing_title = (TextView) itemView.findViewById(R.id.clothing_card);
-            clothing_img = (ImageView) itemView.findViewById(R.id.clothing_img);
-            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
-        }
-
-    }
-
 
 }
