@@ -38,7 +38,6 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(),UserDashboard.class);
             startActivity(intent);
         }
-
     }
 
     @Override

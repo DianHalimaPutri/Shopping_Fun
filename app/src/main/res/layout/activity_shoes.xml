@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_list"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
     <ImageView
         android:id="@+id/meme"
@@ -16,6 +21,7 @@
         app:srcCompat="@drawable/damelia" />
 
     <LinearLayout
+        android:id="@+id/lnr"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_toEndOf="@+id/meme"
@@ -29,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:text="Melstore Jkt Official Shop"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -45,7 +52,581 @@
     </LinearLayout>
 
 
+     <ImageView
+            android:id="@+id/meme1"
+         android:layout_below="@+id/meme"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/bng" />
+
+     <LinearLayout
+            android:id="@+id/lnr1"
+            android:layout_below="@id/lnr"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="BnG Corner"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/bng_corner"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+     <ImageView
+            android:id="@+id/meme2"
+            android:layout_below="@+id/meme1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/nicole" />
+
+     <LinearLayout
+            android:id="@+id/lnr2"
+            android:layout_below="@id/lnr1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="nicoletasbatam"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/nicoletasbatam"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+     <ImageView
+            android:id="@+id/meme3"
+            android:layout_below="@+id/meme2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/zigzag" />
+
+      <LinearLayout
+            android:id="@+id/lnr3"
+            android:layout_below="@id/lnr2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="ZIGZAG SURABAYA"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/zigzagbatam"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/meme4"
+            android:layout_below="@+id/meme3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/isabel" />
+
+        <LinearLayout
+            android:id="@+id/lnr4"
+            android:layout_below="@id/lnr3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Isabel Adelia"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/isabeladelia"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme5"
+            android:layout_below="@+id/meme4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/guns" />
+
+        <LinearLayout
+            android:id="@+id/lnr5"
+            android:layout_below="@id/lnr4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Guns.shoop"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/guns.shoop"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
 
 
 
-</RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme6"
+            android:layout_below="@+id/meme5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/bella" />
+
+        <LinearLayout
+            android:id="@+id/lnr6"
+            android:layout_below="@id/lnr5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Bellashoesjkt Official"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/bella_shoesjkt"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme7"
+            android:layout_below="@+id/meme6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/bowbow" />
+
+        <LinearLayout
+            android:id="@+id/lnr7"
+            android:layout_below="@id/lnr6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Bowbow Shoes Official Shop"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/bowbowshoes"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/meme8"
+            android:layout_below="@+id/meme7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/damelia" />
+
+        <LinearLayout
+            android:id="@+id/lnr8"
+            android:layout_below="@id/lnr7"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Qwerty Zone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/quwertyzone"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme9"
+            android:layout_below="@+id/meme8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/pasdikaki" />
+
+        <LinearLayout
+            android:id="@+id/lnr9"
+            android:layout_below="@id/lnr8"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="PasDiKaki.ID Official Shop"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/pasdikaki.id"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme10"
+            android:layout_below="@+id/meme9"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/daffawahyu" />
+
+        <LinearLayout
+            android:id="@+id/lnr10"
+            android:layout_below="@id/lnr9"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="daffawahyu"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/daffawahyu"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme11"
+            android:layout_below="@+id/meme10"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/alive" />
+
+        <LinearLayout
+            android:id="@+id/lnr11"
+            android:layout_below="@id/lnr10"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="Alivelovearts Official Shop"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/alivelovearts"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme13"
+            android:layout_below="@+id/meme12"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/sepatuafa" />
+
+        <LinearLayout
+            android:id="@+id/lnr13"
+            android:layout_below="@id/lnr12"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="SEPATUAFA_ID"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/sepatuafa"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/meme14"
+            android:layout_below="@+id/meme13"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/vahn" />
+
+        <LinearLayout
+            android:id="@+id/lnr14"
+            android:layout_below="@id/lnr13"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="VAHN Collections Official Shop"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/vahncollections"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/meme12"
+            android:layout_below="@+id/meme11"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/hubi" />
+
+        <LinearLayout
+            android:id="@+id/lnr12"
+            android:layout_below="@id/lnr11"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_toEndOf="@+id/meme"
+            android:layout_toRightOf="@+id/meme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memetitle12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="HUBI SHOP"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sub_meme12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:text="https://shopee.co.id/hubyshop"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

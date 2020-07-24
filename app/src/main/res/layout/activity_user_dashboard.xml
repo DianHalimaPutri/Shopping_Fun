@@ -5,17 +5,9 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     tools:context="com.example.shopping_fun.UserDashboard">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/home_background"
-        android:theme="@style/naviagtionTheme"
-        app:headerLayout="@layout/menu_header"
-        app:menu="@menu/main_menu" />
 
     <LinearLayout
         android:id="@+id/content"
@@ -37,83 +29,50 @@
                 android:src="@drawable/icon_menu" />
 
             <ImageView
-                android:id="@+id/login_signup"
+                android:id="@+id/logout"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@color/banner_background"
-                android:padding="5dp"
-                android:src="@drawable/add_icon" />
+                android:src="@drawable/log"/>
+
+
 
 
         </RelativeLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ScrollView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/app_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginRight="15dp"
-                        android:fontFamily="@font/pattaya"
-                        android:text="@string/logo_name"
-                        android:textSize="30sp" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_below="@id/app_name"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@color/home_background"
-                        android:elevation="8dp">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginLeft="15dp"
-                            android:text="@string/search_text"
-                            android:textSize="20dp" />
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="15dp"
-                            android:src="@drawable/search_icon" />
-
-
-                    </RelativeLayout>
-
-                </RelativeLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/app_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/pattaya"
+                    android:text="@string/logo_name"
+                    android:textSize="30sp" />
 
-                    </LinearLayout>
+            </RelativeLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,6 +92,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/card2"
                             android:gravity="center"
                             android:orientation="vertical">
 
@@ -172,6 +132,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
+                            android:background="@color/card1"
                             android:orientation="vertical">
 
                             <ImageView
@@ -217,6 +178,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
+                            android:background="@color/card4"
                             android:orientation="vertical">
 
                             <ImageView
@@ -254,6 +216,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
+                            android:background="@color/card3"
                             android:orientation="vertical">
 
                             <ImageView
@@ -267,7 +230,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:text="Makeup"
+                                android:text="Kecantikan"
                                 android:textStyle="bold" />
 
                             <View
@@ -281,4 +244,5 @@
                 </LinearLayout>
 
             </LinearLayout>
-</androidx.drawerlayout.widget.DrawerLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>

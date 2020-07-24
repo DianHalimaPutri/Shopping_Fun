@@ -5,14 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen">
+    tools:context=".SplashScreen"
+    android:background="@color/home_background">
 
     <ImageView
-        android:layout_width="437dp"
-        android:layout_height="757dp"
+        android:id="@+id/pict"
+        android:layout_width="326dp"
+        android:layout_height="512dp"
         android:layout_centerInParent="true"
-        android:background="@color/card1"
+        android:background="@color/home_background"
         android:src="@drawable/menu_icon_logo" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pict"
+        android:layout_marginTop="-63dp"
+        android:layout_marginBottom="119dp"
+        android:fontFamily="@font/pattaya"
+        android:text="ShoppingFun"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
 </RelativeLayout>
