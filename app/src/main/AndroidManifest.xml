@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shopping_fun">
+    package="com.dianhp.shoppingfun">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -13,14 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Makeup" />
-        <activity android:name=".Bags" />
-        <activity android:name=".Shoes" />
-        <activity android:name=".Clothing" />
-        <activity android:name=".Login" />
-        <activity android:name=".UserDashboard" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.dianhp.shoppingfun.MainActivity" />
+        <activity android:name="com.dianhp.shoppingfun.Makeup" />
+        <activity android:name="com.dianhp.shoppingfun.Bags" />
+        <activity android:name="com.dianhp.shoppingfun.Shoes" />
+        <activity android:name="com.dianhp.shoppingfun.Clothing" />
+        <activity android:name="com.dianhp.shoppingfun.Login" />
+        <activity android:name="com.dianhp.shoppingfun.UserDashboard" />
+        <activity android:name="com.dianhp.shoppingfun.SplashScreen">
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN" />

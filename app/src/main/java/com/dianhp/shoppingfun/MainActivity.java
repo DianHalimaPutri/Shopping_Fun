@@ -1,4 +1,4 @@
-package com.example.shopping_fun;
+package com.dianhp.shoppingfun;
 
 
 import androidx.appcompat.app.AppCompatActivity;

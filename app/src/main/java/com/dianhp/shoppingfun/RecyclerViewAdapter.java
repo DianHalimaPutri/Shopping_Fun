@@ -1,4 +1,4 @@
-package com.example.shopping_fun;
+package com.dianhp.shoppingfun;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Integer> memeList; //Digunakan untuk Image/Gambar
 
     //Membuat Konstruktor pada Class RecyclerViewAdapter
-    RecyclerViewAdapter(ArrayList<String> arrayList, ArrayList<Integer> memeList){
+    public RecyclerViewAdapter(ArrayList<String> arrayList, ArrayList<Integer> memeList){
         this.arrayList = arrayList;
         this.memeList = memeList;
     }

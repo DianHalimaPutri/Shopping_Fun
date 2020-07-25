@@ -1,4 +1,4 @@
-package com.example.shopping_fun;
+package com.dianhp.shoppingfun;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 
 public class UserDashboard extends AppCompatActivity implements View.OnClickListener {
@@ -29,6 +28,10 @@ public class UserDashboard extends AppCompatActivity implements View.OnClickList
 
         logout = findViewById(R.id.logout);
 
+        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (signInAccount != null){
+
+        }
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

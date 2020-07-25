@@ -1,19 +1,15 @@
-package com.example.shopping_fun;
+package com.dianhp.shoppingfun;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 
-public class Clothing extends AppCompatActivity  {
-
+public class Bags extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clothing);
-
-
+        setContentView(R.layout.activity_bags);
     }
 }
